@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <title>Room Homepage react</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss"> 
+          @theme {
+            --font-sans: "League Spartan", sans-serif;        
+            --color-clifford: #da373d;
+            --color-white: #fff;
+            --color-black: #000;
+            --color-grey-800:#444444;      
+            --color-grey-500:#A0A0A0;      
+            --color-grey-200:#D8D8D8;      
+            --color-grey-100:#EFEFEF;      
+            --color-grey-50:#FAFAFA;      
+            }
+
+            @utility preset-1 {
+              @apply font-semibold text-5xl leading-[90%] tracking-[-2px];
+            }
+
+             @utility preset-2 {
+              @apply font-semibold text-[2.5rem] leading-[100%] tracking-[-2px];
+            }
+
+             @utility preset-3-b {
+              @apply font-bold text-base leading-[140%] tracking-[7px];
+
+            }
+
+             @utility preset-3-sb {
+              @apply font-semibold text-base leading-[100%] tracking-[-0.7px];
+
+            }
+
+             @utility preset-3-m {
+              @apply font-medium text-base leading-[140%] tracking-[-0.5px];
+
+            }
+
+             @utility preset-4 {
+              @apply font-medium text-[0.9375rem] leading-[100%] tracking-[12.5px];
+
+            }
+        </style>
+  </head>
+  <body class="bg-black">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
