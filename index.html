@@ -32,27 +32,31 @@
 
              @utility preset-3-b {
               @apply font-bold text-base leading-[140%] tracking-[7px];
-
             }
 
              @utility preset-3-sb {
               @apply font-semibold text-base leading-[100%] tracking-[-0.7px];
-
             }
 
              @utility preset-3-m {
               @apply font-medium text-base leading-[140%] tracking-[-0.5px];
-
             }
 
              @utility preset-4 {
               @apply font-medium text-[0.9375rem] leading-[100%] tracking-[12.5px];
+            }
 
+            @utility mob-nav-item {
+              @apply cursor-pointer preset-3-sb text-black relative hover:after:content-[''] hover:after:absolute hover:after:top-full hover:after:right-1/2 hover:after:translate-x-1/2 hover:after:w-4 hover:after:h-0.5 hover:after:bg-black hover:after:mt-1.5
+            }
+
+            @utility desk-nav-item {
+              @apply cursor-pointer preset-3-sb text-white relative hover:after:content-[''] hover:after:absolute hover:after:top-full hover:after:right-1/2 hover:after:translate-x-1/2 hover:after:w-4 hover:after:h-0.5 hover:after:bg-white hover:after:mt-1.5
             }
         </style>
   </head>
   <body class="bg-black">
-    <div id="root"></div>
+    <div id="root" class="relative"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
