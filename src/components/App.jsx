@@ -1,11 +1,13 @@
-import Navigation from "./Navigation.jsx";
+import Navigation from "./Navigation.jsx"
+import Content from "./Content.jsx"
 
 function App() {
   return (
     <>
-      <Navigation />
+      <Navigation/>
+      <Content/>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
