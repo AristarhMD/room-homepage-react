@@ -1,19 +1,41 @@
+import {useState} from "react"
+
 import Article from "./reusable/Article.jsx"
 import data from "../data.js"
 
 export default function Content(){
+  const [currentSlider,setCurrentSlider] = useState(0)
+
+const clickedRightSlide = ()=>{
+  if(currentSlider === data.length - 1){
+    setCurrentSlider(0)
+  } else {
+    setCurrentSlider(slide => slide + 1)
+  }
+}
+
+const clickedLeftSlide = ()=>{
+  if(currentSlider === 0){
+    setCurrentSlider(data.length - 1)
+  } else {
+    setCurrentSlider(slide => slide - 1)
+  }
+}
+
   return (
     <main>
       <section className="relative mb-16 xl:mb-0">
-        <div className="flex overflow-hidden">
+      <div className="overflow-hidden">
+        <div className={`flex -translate-x-[${currentSlider*100}%]`}>
           {data.map((item, idx) => <Article key={idx} {...item}/>)}
         </div>
+        </div>
         <div className="absolute flex right-0 xl:right-1/2 top-[360px] md:top-[400px] xl:top-[534px] -translate-y-full xl:translate-x-full">
-          <button className="flex justify-center items-center cursor-pointer size-14 md:size-20 bg-black hover:bg-grey-800">
+          <button onClick={clickedLeftSlide} className="flex justify-center items-center cursor-pointer size-14 md:size-20 bg-black hover:bg-grey-800">
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fillRule="evenodd"/></svg>
           </button>
 
-          <button className="flex justify-center items-center cursor-pointer size-14 md:size-20 bg-black hover:bg-grey-800">
+          <button onClick={clickedRightSlide} className="flex justify-center items-center cursor-pointer size-14 md:size-20 bg-black hover:bg-grey-800">
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fillRule="evenodd"/></svg>
           </button>
         </div>

@@ -6,7 +6,7 @@ export default function Article({imageDesktop,imageSmall,alt,header,text}) {
       <div className="relative w-full h-90 md:h-100 xl:h-133.5 xl:basis-1/2 overflow-hidden">
         <picture className="block w-full h-full">
           <source media="(min-width:768px )" srcSet={imageDesktop} />
-          <img src={imageSmall} alt={alt} className="w-full h-full object-center object-cover" />
+          <img src={imageSmall} alt={alt} className="w-full h-full object-center md:object-top object-cover" />
         </picture>
       </div>
 
